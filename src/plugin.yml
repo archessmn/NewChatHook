@@ -1,0 +1,5 @@
+name: NewChatHook
+version: 0.0.1
+author: archessmn
+main: com.github.archessmn.NewChatHook.Main
+api-version: 1.16

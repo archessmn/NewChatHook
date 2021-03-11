@@ -1,0 +1,3 @@
+DiscordBot:
+  # Bot Token, must be changed to allow the plugin to work.
+  TOKEN: null
