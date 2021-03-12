@@ -1,5 +1,6 @@
 package com.github.archessmn.NewChatHook.DiscordBot;
 
+import com.github.archessmn.NewChatHook.DiscordBot.Commands.CommandHandler;
 import com.github.archessmn.NewChatHook.DiscordBot.Commands.RegisterChatChannel;
 import com.github.archessmn.NewChatHook.DiscordBot.Events.MessageHook;
 import com.github.archessmn.NewChatHook.DiscordBot.Events.OtherListeners;
@@ -48,6 +49,7 @@ public class BotMain {
 
         //api.addListener(new RegisterChatChannel.RegisterChatChannelCommand());
         //api.addListener(new OtherListeners.Listener());
+        api.addListener(new CommandHandler.OnCommand());
         api.addListener(new MessageHook.Message(plugin));
     }
 

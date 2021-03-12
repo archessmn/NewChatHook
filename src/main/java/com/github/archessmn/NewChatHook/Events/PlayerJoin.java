@@ -25,5 +25,9 @@ public class PlayerJoin implements Listener {
                 + plugin.getServer().getOnlinePlayers().size()
                 + "/" + plugin.getServer().getMaxPlayers() + " players online.");
         channel.sendMessage(event.getPlayer().getDisplayName() + " joined the game");
+
+
+
+
     }
 }

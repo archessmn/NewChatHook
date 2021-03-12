@@ -6,6 +6,7 @@ import com.github.archessmn.NewChatHook.DiscordBot.Events.OtherListeners;
 import com.github.archessmn.NewChatHook.Events.PlayerChat;
 import com.github.archessmn.NewChatHook.Events.PlayerJoin;
 import com.github.archessmn.NewChatHook.Events.PlayerQuit;
+import com.github.archessmn.NewChatHook.Storage.Players;
 import net.byteflux.libby.BukkitLibraryManager;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -62,6 +63,11 @@ public class Main extends JavaPlugin {
         this.getConfig().addDefault("DiscordBot.InfoChannel", null);
         this.saveConfig();
         this.reloadConfig();
+
+        Players.setup();
+        Players.get().options().copyDefaults(true);
+        Players.save();
+        Players.reload();
     }
 
     @Override

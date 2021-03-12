@@ -1,3 +1,17 @@
 DiscordBot:
   # Bot Token, must be changed to allow the plugin to work.
   TOKEN: null
+
+Chat-Config:
+  # Layout of the chat, placeholders as below:
+  #   %playername%
+  #   %discordname%
+  #   %linkedmcname%
+  #   %message%
+  #   "&" will be converted to "
+  #
+  MC-MCLayout:    "<%playername%> %message%"
+  MC-DCLayout:    "<%playername%> %message%"
+  DC-MCLayout:
+    ifLinked:     "<%linkedmcname%> %message%"
+    ifUnlinked:   "<%discordname%> %message%"

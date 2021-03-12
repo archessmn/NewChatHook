@@ -22,7 +22,7 @@ public class PlayerQuit implements Listener {
         TextChannel channel = api.getTextChannelById(plugin.getConfig().getString("DiscordBot.ChatChannel")).orElse(null);
         assert channel != null;
         Objects.requireNonNull(channel.asServerTextChannel().orElse(null)).updateTopic("There are "
-                + plugin.getServer().getOnlinePlayers().size()
+                + (plugin.getServer().getOnlinePlayers().size() - 1)
                 + "/" + plugin.getServer().getMaxPlayers() + " players online.");
         channel.sendMessage(event.getPlayer().getDisplayName() + " left the game");
     }
