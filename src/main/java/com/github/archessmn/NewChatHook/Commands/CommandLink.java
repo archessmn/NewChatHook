@@ -19,9 +19,7 @@ public class CommandLink implements CommandExecutor {
     public String generateLinkingID(UUID uuid) {
         String linkingID = "";
 
-        for (int i = 0; i++) {
 
-        }
         return linkingID;
     }
 }
