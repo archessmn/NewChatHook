@@ -1,5 +1,6 @@
 package com.github.archessmn.NewChatHook;
 
+import com.github.archessmn.NewChatHook.Commands.CommandLink;
 import com.github.archessmn.NewChatHook.DiscordBot.BotMain;
 import com.github.archessmn.NewChatHook.DiscordBot.Commands.RegisterChatChannel;
 import com.github.archessmn.NewChatHook.DiscordBot.Events.OtherListeners;
@@ -52,6 +53,8 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new PlayerChat(this), this);
         pm.registerEvents(new PlayerJoin(this), this);
         pm.registerEvents(new PlayerQuit(this), this);
+
+        this.getCommand("link").setExecutor(new CommandLink());
 
 
 

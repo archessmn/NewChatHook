@@ -1,6 +1,8 @@
 package com.github.archessmn.NewChatHook.Events;
 
 import com.github.archessmn.NewChatHook.Main;
+import com.github.archessmn.NewChatHook.Storage.Players;
+import com.github.archessmn.NewChatHook.Util;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -26,7 +28,9 @@ public class PlayerJoin implements Listener {
                 + "/" + plugin.getServer().getMaxPlayers() + " players online.");
         channel.sendMessage(event.getPlayer().getDisplayName() + " joined the game");
 
-
+        if (!Objects.equals(Players.get().getString(event.getPlayer().getUniqueId() + ".mcName"), event.getPlayer().getName())) {
+            Util.playerDataSetup(event.getPlayer());
+        }
 
 
     }
